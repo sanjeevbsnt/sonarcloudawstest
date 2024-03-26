@@ -10,7 +10,7 @@ env:
 phases:
   install:
     runtime-versions:
-      nodejs: 14
+      nodejs: 20
   pre_build:
     commands:
       - npm install -g npm@latest
@@ -24,5 +24,4 @@ phases:
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$(aws secretsmanager get-secret-value --secret-id local/sonar:Project --query SecretString --output text) >result.json
       - cat result.json
       - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then $CODEBUILD_BUILD_SUCCEEDING -eq 0 ;fi
-
 
