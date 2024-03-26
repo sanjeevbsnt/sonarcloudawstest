@@ -10,7 +10,7 @@ env:
 phases:
   install:
     runtime-versions:
-      java: openjdk8
+      java: corretto17
   pre_build:
     commands:
       - apt-get update
@@ -21,7 +21,6 @@ phases:
       - wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.3.0.1492-linux.zip
       - unzip ./sonar-scanner-cli-3.3.0.1492-linux.zip
       - export PATH=$PATH:/sonar-scanner-3.3.0.1492-linux/bin/ 
-
   build:
     commands:
       - mvn test     
