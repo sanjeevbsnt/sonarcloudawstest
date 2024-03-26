@@ -1,0 +1,20 @@
+{
+    "name": "sonarcloudawstest",
+    "version": "1.0.0",
+    "description": "A simple React project for SonarCloud and AWS",
+    "main": "app.js",
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "keywords": [],
+    "author": "Your Name",
+    "license": "ISC",
+    "dependencies": {
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2"
+    }
+  }
+  
